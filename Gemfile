@@ -48,3 +48,5 @@ end
 
 # Gemfile
 gem 'graphql'
+
+gem 'devise'
