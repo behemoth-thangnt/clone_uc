@@ -25,5 +25,27 @@
 !/tmp/storage/
 !/tmp/storage/.keep
 
+/public/assets
+
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+
+.env
+/coverage/*
+data.ms/
+
+config/settings.local.yml
+config/settings/*.local.yml
+config/environments/*.local.yml
+
+# Vite Ruby
+/public/vite*
+node_modules
+# Vite uses dotenv and suggests to ignore local-only env files. See
+# https://vitejs.dev/guide/env-and-mode.html#env-files
+*.local
+
+# Rails credentials
+/config/credentials/*.key
+
+.DS_Store
