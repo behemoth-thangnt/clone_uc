@@ -1,0 +1,4 @@
+require 'db/schemas/admins.schema'
+require 'db/schemas/admin_roles.schema'
+require 'db/schemas/guides.schema'
+require 'db/schemas/jobs.schema'

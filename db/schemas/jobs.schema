@@ -1,0 +1,19 @@
+create_table "jobs", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+  t.bigint :admin_id, comment: "実行者"
+  t.string :number, null: false, comment: "ジョブ ID"
+  t.integer :state, null: false, default: 1, comment: "ステータス"
+  t.integer :job_type, null: false, default: 1, comment: "ジョブ名"
+  t.json :params
+  t.json :error
+  t.integer :job_count, null: false, default: 0
+  t.integer :job_finished_count, null: false, default: 0
+
+  t.timestamps
+  t.datetime :started_at
+  t.datetime :finished_at
+  t.datetime :canceled_at
+
+  t.integer :lock_version
+
+  t.index ["number"], unique: true
+end
