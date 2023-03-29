@@ -7,18 +7,17 @@
 > Database creation
 
 - Init Schemafile:
-
-ridgepole -c config.yml --export -o Schemafile
+```
+  ridgepole -c config.yml --export -o Schemafile
+```
 
 - For the first time running migrate:
-
-ridgepole -c config.yml --apply --dry-run
+```
+  ridgepole -c config.yml --apply --dry-run
+```
 
 - Manual migrate:
-
+```
   ridgepole -c config.yml --apply
   rails ddb:migrate
-
-- Database initialization
-
-- How to run the test suite
+```
