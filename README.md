@@ -16,8 +16,8 @@
   ridgepole -c config.yml --apply --dry-run
 ```
 
-- Manual migrate:
+- Manual migrate: create db development & db test simultaneously
 ```
   ridgepole -c config.yml --apply
-  rails ddb:migrate
+  rails db:migrate db:test:prepare
 ```

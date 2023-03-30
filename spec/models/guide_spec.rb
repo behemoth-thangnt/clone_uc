@@ -12,7 +12,7 @@
 require 'rails_helper'
 
 RSpec.describe Guide, type: :model do
-  let!(:guide) { create(title: 'guide', content: 'content') }
+  let!(:guide) { Guide.create(title: 'guide', content: 'content') }
   it do
     expect(described_class.find_by(title: 'guide').present?).to be(true)
   end
