@@ -647,6 +647,7 @@ DEPENDENCIES
   sidekiq-scheduler
   simplecov
   spring
+  sprockets (~> 4.0)
   tzinfo-data
   uuidtools
   vite_rails

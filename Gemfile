@@ -100,7 +100,7 @@ gem 'graphql'
 gem 'jp_prefecture'
 gem 'jwt'
 gem 'redis', '~> 4.0'
-# gem 'sprockets-rails'
+gem 'sprockets', '~> 4.0'
 
 gem 'aasm'
 gem 'active_hash'
