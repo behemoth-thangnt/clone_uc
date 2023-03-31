@@ -21,3 +21,8 @@
   ridgepole -c config.yml --apply
   rails db:migrate db:test:prepare
 ```
+
+- Annotate
+```
+bundle exec rake remove_annotation && bundle exec rake annotate_models
+```
