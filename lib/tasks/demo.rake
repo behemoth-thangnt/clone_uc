@@ -1,3 +1,5 @@
+# rubocop:disable all
+
 namespace :demo do
   desc "Demo task"
   task rake: :environment do
@@ -7,5 +9,4 @@ namespace :demo do
     )
     puts "done"
   end
-
 end

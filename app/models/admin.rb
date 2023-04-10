@@ -35,4 +35,11 @@
 class Admin < ApplicationRecord
   devise :database_authenticatable
   acts_as_paranoid
+
+  def jwt_payload
+    {
+      sub: id,
+      type: :admin
+    }
+  end
 end
