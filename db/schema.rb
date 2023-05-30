@@ -77,30 +77,52 @@ ActiveRecord::Schema[7.0].define(version: 0) do
     t.index ["email", "deleted_at"], name: "idx_admins_on_email_deleted_at", unique: true
   end
 
-  create_table "guides", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
-    t.text "title", null: false
-    t.text "content", null: false
-    t.bigint "lock_version", null: false
+  create_table "customer", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.string "email", null: false
+    t.string "encrypted_password", null: false
+    t.bigint "lock_version"
+    t.string "name", default: "", comment: "姓名(セイメイ)"
+    t.string "name01"
+    t.string "name02"
+    t.string "kana", default: "", comment: "カナ"
+    t.string "kana01"
+    t.string "kana02"
+    t.string "tel", default: "", comment: "電話番号"
+    t.string "tel01"
+    t.string "tel02"
+    t.string "tel03"
+    t.string "fax", default: "", comment: "FAX"
+    t.string "fax01"
+    t.string "fax02"
+    t.string "fax03"
+    t.datetime "deleted_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["email", "deleted_at"], name: "idx_customers_on_email_deleted_at", unique: true
   end
 
-  create_table "jobs", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
-    t.bigint "admin_id", comment: "実行者"
-    t.string "number", null: false, comment: "ジョブ ID"
-    t.integer "state", default: 1, null: false, comment: "ステータス"
-    t.integer "job_type", default: 1, null: false, comment: "ジョブ名"
-    t.json "params"
-    t.json "error"
-    t.integer "job_count", default: 0, null: false
-    t.integer "job_finished_count", default: 0, null: false
+  create_table "customers", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.string "email", null: false
+    t.string "encrypted_password", null: false
+    t.bigint "lock_version"
+    t.string "name", default: "", comment: "姓名(セイメイ)"
+    t.string "name01"
+    t.string "name02"
+    t.string "kana", default: "", comment: "カナ"
+    t.string "kana01"
+    t.string "kana02"
+    t.string "tel", default: "", comment: "電話番号"
+    t.string "tel01"
+    t.string "tel02"
+    t.string "tel03"
+    t.string "fax", default: "", comment: "FAX"
+    t.string "fax01"
+    t.string "fax02"
+    t.string "fax03"
+    t.datetime "deleted_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.datetime "started_at"
-    t.datetime "finished_at"
-    t.datetime "canceled_at"
-    t.integer "lock_version"
-    t.index ["number"], name: "index_jobs_on_number", unique: true
+    t.index ["email", "deleted_at"], name: "idx_customers_on_email_deleted_at", unique: true
   end
 
 end

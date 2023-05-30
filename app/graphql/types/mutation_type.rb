@@ -2,11 +2,12 @@
 
 module Types
   class MutationType < Types::BaseObject
-    # TODO: remove me
-    field :test_field, String, null: false,
-                               description: 'An example field added by the generator'
-    def test_field
-      'Hello World'
-    end
+    description "Mutation Type"
+
+    #### Admin
+    field :admins_sign_in, mutation: ::Mutations::Admins::Auths::SignIn, description: "Admin Sign In"
+
+    #### Customer
+    field :customers_sign_in, mutation: ::Mutations::Customers::Auths::SignIn, description: "Customer Sign In"
   end
 end

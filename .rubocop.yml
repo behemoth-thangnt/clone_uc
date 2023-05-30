@@ -1,0 +1,15 @@
+require:
+  - rubocop-rails
+  - rubocop-rspec
+  - rubocop-graphql
+Style:
+  Enabled: false
+AllCops:
+  DisplayCopNames: true
+
+Style/Documentation:
+  Enabled: false
+GraphQl/ExtractInputType:
+  Enabled: false
+Metrics/AbcSize:
+  Enabled: false

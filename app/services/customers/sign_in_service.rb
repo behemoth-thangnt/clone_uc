@@ -1,6 +1,4 @@
-# frozen_string_literal: true
-
-module Admins
+module Customers
   class SignInService
     include Interactor::Organizer
 
